@@ -1,0 +1,419 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "seed": 42
+  },
+  "selected_model": "gradient_boosting",
+  "selection_rule": "minimum validation Brier score among four fixed candidates",
+  "split_counts": {
+    "test": 5982,
+    "validation": 2957,
+    "calibration": 3028,
+    "train": 18033
+  },
+  "split_default_rates": {
+    "test": 0.21731862253426948,
+    "validation": 0.22117010483598243,
+    "calibration": 0.21796565389696168,
+    "train": 0.22303554594354794
+  },
+  "unique_input_profiles": 29183,
+  "validation": {
+    "logistic": {
+      "roc_auc": 0.7504816878928031,
+      "average_precision": 0.5048545300826137,
+      "brier": 0.14333632968532445,
+      "log_loss": 0.45430635200478287
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.7825353448035471,
+      "average_precision": 0.5587419755424998,
+      "brier": 0.13473669738634686,
+      "log_loss": 0.42920461476312116
+    },
+    "logistic_calibrated": {
+      "roc_auc": 0.7504816878928031,
+      "average_precision": 0.5048545300826137,
+      "brier": 0.1433565981747208,
+      "log_loss": 0.45420481377272626
+    },
+    "gradient_boosting_calibrated": {
+      "roc_auc": 0.7825353448035471,
+      "average_precision": 0.5587419755424998,
+      "brier": 0.13479477865855422,
+      "log_loss": 0.42950619922179406
+    }
+  },
+  "test": {
+    "logistic": {
+      "roc_auc": 0.7587028883120297,
+      "average_precision": 0.5047748755966435,
+      "brier": 0.13979290243873213,
+      "log_loss": 0.4441433921139601
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.7817117109716426,
+      "average_precision": 0.5511989126890817,
+      "brier": 0.13327129198174972,
+      "log_loss": 0.4247748919562995
+    },
+    "logistic_calibrated": {
+      "roc_auc": 0.7587028883120297,
+      "average_precision": 0.5047748755966435,
+      "brier": 0.14001749272493422,
+      "log_loss": 0.4444454000509274
+    },
+    "gradient_boosting_calibrated": {
+      "roc_auc": 0.7817117109716426,
+      "average_precision": 0.5511989126890817,
+      "brier": 0.13334202321048827,
+      "log_loss": 0.42506532016711135
+    }
+  },
+  "test_95pct_cluster_bootstrap": {
+    "roc_auc": [
+      0.7654301692308538,
+      0.795372082081454
+    ],
+    "average_precision": [
+      0.5201515096042507,
+      0.5771993285619369
+    ],
+    "brier": [
+      0.12770977820422952,
+      0.13938328384527596
+    ],
+    "log_loss": [
+      0.40971922102060165,
+      0.43976969205827277
+    ]
+  },
+  "operating_point": {
+    "threshold": 0.14,
+    "tn": 2561,
+    "fp": 2121,
+    "fn": 246,
+    "tp": 1054,
+    "recall": 0.8107692307692308,
+    "precision": 0.3319685039370079,
+    "false_positive_rate": 0.45301153353267837,
+    "review_rate": 0.5307589434971581,
+    "cost_per_1000": 560.1805416248746
+  },
+  "threshold_0_5": {
+    "threshold": 0.5,
+    "tn": 4453,
+    "fp": 229,
+    "fn": 837,
+    "tp": 463,
+    "recall": 0.35615384615384615,
+    "precision": 0.6690751445086706,
+    "false_positive_rate": 0.04891072191371209,
+    "review_rate": 0.11568037445670344,
+    "cost_per_1000": 737.880307589435
+  },
+  "no_review_cost_per_1000": 1086.5931126713474,
+  "review_everyone_cost_per_1000": 782.6813774657305,
+  "cost_assumption": "missed default = 5 units; false alert = 1; correct decisions = 0; illustrative, not dollars",
+  "cost_sensitivity": [
+    {
+      "missed_default_cost": 2,
+      "threshold": 0.27,
+      "tn": 4019,
+      "fp": 663,
+      "fn": 583,
+      "tp": 717,
+      "recall": 0.5515384615384615,
+      "precision": 0.5195652173913043,
+      "false_positive_rate": 0.14160615121742845,
+      "review_rate": 0.23069207622868607,
+      "cost_per_1000": 305.7505850885991
+    },
+    {
+      "missed_default_cost": 5,
+      "threshold": 0.14,
+      "tn": 2561,
+      "fp": 2121,
+      "fn": 246,
+      "tp": 1054,
+      "recall": 0.8107692307692308,
+      "precision": 0.3319685039370079,
+      "false_positive_rate": 0.45301153353267837,
+      "review_rate": 0.5307589434971581,
+      "cost_per_1000": 560.1805416248746
+    },
+    {
+      "missed_default_cost": 10,
+      "threshold": 0.08,
+      "tn": 1299,
+      "fp": 3383,
+      "fn": 71,
+      "tp": 1229,
+      "recall": 0.9453846153846154,
+      "precision": 0.2664787510841284,
+      "false_positive_rate": 0.7225544639043144,
+      "review_rate": 0.7709796054831161,
+      "cost_per_1000": 684.2193246405884
+    }
+  ],
+  "drift_stress_test": {
+    "scenario": "synthetic 50% increase in credit limits; not real temporal drift",
+    "unshifted": [
+      {
+        "feature": "PAY_0",
+        "psi": 0.004435459049959232,
+        "investigate": false
+      },
+      {
+        "feature": "LIMIT_BAL",
+        "psi": 0.0042353400912235935,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_3",
+        "psi": 0.0036954240185909197,
+        "investigate": false
+      },
+      {
+        "feature": "bill_change",
+        "psi": 0.003494125885839344,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT2",
+        "psi": 0.0034660548409281345,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT5",
+        "psi": 0.0034138951311668813,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT2",
+        "psi": 0.003386395731538527,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_2",
+        "psi": 0.0031296633139216304,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT3",
+        "psi": 0.003063555647538812,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_4",
+        "psi": 0.0029120814471557894,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT1",
+        "psi": 0.0027988339274559264,
+        "investigate": false
+      },
+      {
+        "feature": "utilization_latest",
+        "psi": 0.002794767263495854,
+        "investigate": false
+      },
+      {
+        "feature": "payment_to_bill",
+        "psi": 0.0025094713026959743,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_6",
+        "psi": 0.0023051991053155,
+        "investigate": false
+      },
+      {
+        "feature": "mean_bill",
+        "psi": 0.0022910484369921265,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT4",
+        "psi": 0.0021905094671536775,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT5",
+        "psi": 0.0021752377660164152,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT3",
+        "psi": 0.0020722785376279273,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT1",
+        "psi": 0.0018201716291133996,
+        "investigate": false
+      },
+      {
+        "feature": "months_overdue",
+        "psi": 0.0016894837063149016,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT6",
+        "psi": 0.0016687585032302316,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT6",
+        "psi": 0.0012417307787581245,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT4",
+        "psi": 0.0010517340399839683,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_5",
+        "psi": 0.0007863253709389484,
+        "investigate": false
+      }
+    ],
+    "shifted": [
+      {
+        "feature": "utilization_latest",
+        "psi": 1.1485192861135243,
+        "investigate": true
+      },
+      {
+        "feature": "LIMIT_BAL",
+        "psi": 0.7371010891945784,
+        "investigate": true
+      },
+      {
+        "feature": "bill_change",
+        "psi": 0.08913805299307054,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_0",
+        "psi": 0.004435459049959232,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_3",
+        "psi": 0.0036954240185909197,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT2",
+        "psi": 0.0034660548409281345,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT5",
+        "psi": 0.0034138951311668813,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT2",
+        "psi": 0.003386395731538527,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_2",
+        "psi": 0.0031296633139216304,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT3",
+        "psi": 0.003063555647538812,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_4",
+        "psi": 0.0029120814471557894,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT1",
+        "psi": 0.0027988339274559264,
+        "investigate": false
+      },
+      {
+        "feature": "payment_to_bill",
+        "psi": 0.0025094713026959743,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_6",
+        "psi": 0.0023051991053155,
+        "investigate": false
+      },
+      {
+        "feature": "mean_bill",
+        "psi": 0.0022910484369921265,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT4",
+        "psi": 0.0021905094671536775,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT5",
+        "psi": 0.0021752377660164152,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT3",
+        "psi": 0.0020722785376279273,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT1",
+        "psi": 0.0018201716291133996,
+        "investigate": false
+      },
+      {
+        "feature": "months_overdue",
+        "psi": 0.0016894837063149016,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT6",
+        "psi": 0.0016687585032302316,
+        "investigate": false
+      },
+      {
+        "feature": "BILL_AMT6",
+        "psi": 0.0012417307787581245,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_AMT4",
+        "psi": 0.0010517340399839683,
+        "investigate": false
+      },
+      {
+        "feature": "PAY_5",
+        "psi": 0.0007863253709389484,
+        "investigate": false
+      }
+    ]
+  },
+  "artifact": {
+    "sha256": "5ed2e97bf0728e7f879e32b062257a16147fe7f4396fe41c680a64b96a337780",
+    "environment": {
+      "python": "3.12.14",
+      "sklearn": "1.8.0",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+      "seed": 42
+    }
+  }
+}
